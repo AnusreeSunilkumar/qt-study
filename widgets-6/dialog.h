@@ -19,20 +19,17 @@ public:
     ~Dialog() override;
 
 private slots:
-    void on_commandLinkButton_clicked();
+    void append();
 
-    void on_commandLinkButton_2_clicked();
+    void on_btnSave_clicked();
 
-    void on_commandLinkButton_3_clicked();
-
-    void on_buttonBox_accepted();
-
-    void on_buttonBox_rejected();
-
-    void on_buttonBox_helpRequested();
+    void on_btnVerify_clicked();
 
 private:
     Ui::Dialog *ui;
-    void selectOption(QObject* sender);
+
+    QString temp;
+    QString code;
+
 };
 #endif // DIALOG_H
